@@ -4,7 +4,7 @@ import { publicRoutes } from './routes'
 import './App.css'
 import Home from '@p/Home'
 import DefaultLayout from './components/Layout/DefaultLayout'
-
+import 'boxicons';
 
 function App() {
 
