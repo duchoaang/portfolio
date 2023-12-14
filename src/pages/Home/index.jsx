@@ -24,7 +24,7 @@ const Home = () => {
       <ChildrenContainer>
         <StyledMain>
           <StyledLeftMain>
-            <StyledLeftImage src="/src/assets/mainPicture.jpg"></StyledLeftImage>
+            <StyledLeftImage src=""></StyledLeftImage>
           </StyledLeftMain>
           <StyledRightMain>
             <StyledContact>
@@ -87,8 +87,8 @@ const StyledMain = styled.main`
   justify-content: center;
 `;
 const StyledLeftMain = styled.div`
-  width: 330px;
-  height: 330px;
+  width: 340px;
+  height: 340px;
   border: 1px solid rgba(109, 108, 108, 0.5);
   -webkit-background-clip: padding-box; /* for Safari */
   background-clip: padding-box;
@@ -101,8 +101,11 @@ const StyledLeftMain = styled.div`
   align-items: center;
 `;
 const StyledLeftImage = styled.img`
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
+  background-image: url('/src/assets/picture_3.jpg');
+  background-position-x:58%;
+  background-position-y:50%;
   border-radius: 50%;
   transition: transform 0.3s ease;
   &:hover {
@@ -135,15 +138,15 @@ const ButtonWrapper = styled.div`
     outline-style: none;
     cursor: pointer;
     border: none;
-    font-size: 15px;
+    font-size: var(--fontSize-button)
   }
 `;
 const ButtonLeft = styled.button`
   border: 2px solid black;
 `;
 const ButtonRight = styled.button`
-  background-color: #222020;
-  color: white;
+  background-color: var(--button-right);
+  color: var(--textbutton-right);
   outline: none;
 `;
 

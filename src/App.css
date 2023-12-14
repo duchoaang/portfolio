@@ -1,13 +1,33 @@
-*{
-    padding:0;
-    margin:0;
+* {
+
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-weight: 500;
+    line-height: 35px;
 }
 
 ul li {
     text-decoration: none;
     list-style-type: none;
 }
-a{
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+a {
     text-decoration: none !important;
-    color: black;
+    color          : black;
+
+}
+
+:root {
+    --button-right    : #222020;
+    --textbutton-right: #fff;
+    --button-left     : green;
+    --fontSize-button : 15px;
+    --color-dot       : #222020;
+    --fontSize-normal : 15px;
+    --line-color: #222020;
 }

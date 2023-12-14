@@ -10,7 +10,7 @@ const Header = () => {
           </StyleUlLeft>
           <StyleUlRight>
             <li>Home</li>
-            <li><a href="#whychooseme">About me</a></li>
+            <li><a href="#aboutme">About me</a></li>
             <li>Skills</li>
             <li>Projects</li>
             <li>Contact</li>
