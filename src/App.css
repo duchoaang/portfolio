@@ -31,3 +31,14 @@ a {
     --fontSize-normal : 15px;
     --line-color: #222020;
 }
+#line{
+    background-color: var(--line-color);
+    width: 180px;
+  
+    height: 4px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 1%;
+    margin-bottom: 50px;
+}

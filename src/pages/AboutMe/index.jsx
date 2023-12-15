@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 function AboutMe() {
-  
-
-  
-
   const [highlightText, setHighlightText] = useState([
     {
       context: "Build RestFul API with Java, Python",
@@ -19,9 +15,9 @@ function AboutMe() {
   return (
     <>
       <section id="aboutme">
-        <SAboutMe >About Me</SAboutMe>
+        <SAboutMe>About Me</SAboutMe>
         <WhyChooseMe>Why Choose Me?</WhyChooseMe>
-        <Line></Line>
+        <div id="line"></div>
         <IntroduceBookWrapper>
           <IntroduceBookLeft></IntroduceBookLeft>
           <IntroduceBookRight>
@@ -94,6 +90,10 @@ const IntroduceBookLeft = styled.div`
   background-position-y: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 const IntroduceBookRight = styled.div`
   flex: 1;
@@ -148,19 +148,9 @@ const HightLightDot = styled.div`
   background-color: var(--color-dot);
 `;
 const HightLightText = styled.h2`
+
   font-size: var(--fontSize-normal);
 `;
-const Line = styled.div`
-    background-color:var(--line-color);
-    width:180px;
- 
-    height:4px;
-    display: flex;
-    justify-content:center;
-    margin:0 auto;
-    margin-top:1%;
-      margin-bottom: 50px;
-   
-`
+
 
 export default AboutMe;

@@ -2,7 +2,11 @@ import styled, { keyframes } from "styled-components";
 import React, { useState, useEffect, useRef } from "react";
 import "boxicons";
 import Typed from "typed.js";
+import Skills from "../Skills";
 import AboutMe from "../AboutMe";
+// import Card from '../Card';
+import Projects from "../Projects";
+
 const Home = () => {
   const el = useRef(null);
   useEffect(() => {
@@ -66,10 +70,12 @@ const Home = () => {
         </StyledMain>
       </ChildrenContainer>
 
-
-      <AboutMe/>
-    
-     
+      <AboutMe />
+      <Skills />
+      <SAboutMe>Featured Projects</SAboutMe>
+      <WhyChooseMe>Few project featured by me</WhyChooseMe>
+      <div id="line"></div>
+      <Projects/>
     </>
   );
 };
@@ -103,9 +109,9 @@ const StyledLeftMain = styled.div`
 const StyledLeftImage = styled.img`
   width: 320px;
   height: 320px;
-  background-image: url('/src/assets/picture_3.jpg');
-  background-position-x:58%;
-  background-position-y:50%;
+  background-image: url("/src/assets/picture_3.jpg");
+  background-position-x: 58%;
+  background-position-y: 50%;
   border-radius: 50%;
   transition: transform 0.3s ease;
   &:hover {
@@ -138,7 +144,7 @@ const ButtonWrapper = styled.div`
     outline-style: none;
     cursor: pointer;
     border: none;
-    font-size: var(--fontSize-button)
+    font-size: var(--fontSize-button);
   }
 `;
 const ButtonLeft = styled.button`
@@ -178,6 +184,9 @@ const WhyChooseMe = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
 `;
 const IntroduceHelloIm = styled.h2`
   font-size: 15px;
@@ -186,7 +195,7 @@ const IntroduceHelloIm = styled.h2`
 `;
 const IntroduceName = styled.h2`
   font-size: 30px;
-  margin-top:20px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
 `;
@@ -195,3 +204,17 @@ const IntroduceWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
 `;
+const SAboutMe = styled.h2`
+  display: flex;
+  margin-top:8%;
+  font-size: 35px;
+  font-weight: bold;
+  justify-content: center;
+`;
+
+const CardWrapper = styled.div`
+  display: flex;
+  width:100%;
+  justify-content:space-around;
+  flex-wrap:wrap;
+`
