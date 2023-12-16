@@ -20,7 +20,9 @@ const ProjectInfo = [
       {
         nameTech: "Docker, Jenkins",
       },
+      
     ],
+    linkGit: "",
     member:"1",
     role:"Full-stack"
   },

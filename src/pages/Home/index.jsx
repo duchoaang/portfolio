@@ -4,7 +4,7 @@ import "boxicons";
 import Typed from "typed.js";
 import Skills from "../Skills";
 import AboutMe from "../AboutMe";
-// import Card from '../Card';
+
 import Projects from "../Projects";
 
 const Home = () => {
@@ -19,7 +19,7 @@ const Home = () => {
     });
 
     return () => {
-      // Destroy Typed instance during cleanup to stop animation
+
       typed.destroy();
     };
   }, []);
@@ -76,6 +76,9 @@ const Home = () => {
       <WhyChooseMe>Few project featured by me</WhyChooseMe>
       <div id="line"></div>
       <Projects/>
+
+      <SAboutMe>Achievement</SAboutMe>
+      <div id="line"></div>
     </>
   );
 };
@@ -212,9 +215,3 @@ const SAboutMe = styled.h2`
   justify-content: center;
 `;
 
-const CardWrapper = styled.div`
-  display: flex;
-  width:100%;
-  justify-content:space-around;
-  flex-wrap:wrap;
-`

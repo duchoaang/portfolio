@@ -18,7 +18,7 @@
     transition: transform 0.5s ease-in-out;
   }
   img:hover {
-    transform: scale(1.5); /* Hoặc giá trị mong muốn của zoom */
+    transform: scale(1.2); 
     transform-origin: center center;
   }
   .card.flipped {
