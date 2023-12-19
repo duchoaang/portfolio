@@ -6,9 +6,10 @@ import Home from "@p/Home";
 import DefaultLayout from "./components/Layout/DefaultLayout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
+import snowImg from './assets/snow.png'
 import Snowfall from "react-snowfall";
 const snowflake1 = document.createElement('img')
-snowflake1.src = '/src/assets/snow.png'
+snowflake1.src = snowImg
 const images = [snowflake1, snowflake1]
 console.log(images);
 function App() {

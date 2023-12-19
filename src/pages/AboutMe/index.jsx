@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
+import imgMe from '../../assets/mainPicture.jpg'
 function AboutMe() {
   const [highlightText, setHighlightText] = useState([
     {
@@ -25,7 +26,7 @@ function AboutMe() {
         <WhyChooseMe>Why Choose Me?</WhyChooseMe>
         <div id="line"></div>
         <IntroduceBookWrapper>
-          <IntroduceBookLeft></IntroduceBookLeft>
+          <IntroduceBookLeft style={{backgroundImage:`url(${imgMe})`}}></IntroduceBookLeft>
           <IntroduceBookRight>
             <ItemWrapper>
               <TextRight>
@@ -91,7 +92,7 @@ const IntroduceBookWrapper = styled.div`
 const IntroduceBookLeft = styled.div`
   background-color: blue;
   flex: 1;
-  background-image: url("/src/assets/mainPicture.jpg");
+ 
   background-position-x: 50%;
   background-position-y: 100%;
   background-repeat: no-repeat;

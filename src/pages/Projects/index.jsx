@@ -4,11 +4,12 @@ import styled from "styled-components";
 import cardDessertation from "../../assets/dissertation.jpg";
 import learningSystem from "../../assets/learningSystem.jpg";
 import documents from "../../assets/documents.png";
+import legal from '../../assets/project_1.jpg'
 const ProjectInfo = [
   {
-    img: "/src/assets/project_1.jpg",
+    img: legal,
     name: "CodeHeroes Legal System, 2023",
-    des: "Hệ thống cho phép người dùng tra cứu pháp điển, trả lời các câu hỏi thông minh ",
+    des: "The system allows users to look up laws and answer intelligent questions about the law",
     tech: [
       {
         nameTech: "ReactJs",
@@ -25,7 +26,7 @@ const ProjectInfo = [
     ],
     linkLive: "https://hethongphapluatcodeheroes.netlify.app/",
     linkGit: "https://github.com/duchoaang/LegalKnowledgeBot",
-    member: "1",
+    member: "3",
     role: "Full-stack",
     result:
       "Improve Python Flask skills, know use Netlify to deploy system, know how to use Docker, Jenkins to build CI/CD system.",

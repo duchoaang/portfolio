@@ -4,7 +4,7 @@ import "boxicons";
 import Typed from "typed.js";
 import Skills from "../Skills";
 import AboutMe from "../AboutMe";
-
+import imgMe from '../../assets/picture_3.jpg'
 import Projects from "../Projects";
 import Achievement from "../Achievement";
 import Contact from "../Contact";
@@ -28,7 +28,7 @@ const Home = () => {
       <ChildrenContainer>
         <StyledMain>
           <StyledLeftMain>
-            <StyledLeftImage src=""></StyledLeftImage>
+            <StyledLeftImage style={{backgroundImage:`url(${imgMe})`}} src=""></StyledLeftImage>
           </StyledLeftMain>
           <StyledRightMain>
             <StyledContact>
@@ -120,7 +120,7 @@ const StyledLeftMain = styled.div`
 const StyledLeftImage = styled.img`
   width: 320px;
   height: 320px;
-  background-image: url("/src/assets/picture_3.jpg");
+
   background-position-x: 58%;
   background-position-y: 50%;
   border-radius: 50%;
