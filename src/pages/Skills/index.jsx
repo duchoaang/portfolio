@@ -53,11 +53,7 @@ function Skills() {
       topicName: "Back-end Development",
       href: "#backend",
     },
-    // {
-    //   icon: "faUser",
-    //   topicName: "Moblie-app Development",
-    //   href: "#moblie",
-    // },
+  
     {
       icon: "faUser",
       topicName: "Devops",
@@ -67,78 +63,80 @@ function Skills() {
 
   return (
     <>
-      <SkillsWrapper>
-        <SAboutMe>Skills</SAboutMe>
-        <WhyChooseMe>Languages, Frameworks...</WhyChooseMe>
-        <div id="line"></div>
-
-        <SkillsDetails>
-          <DetailsLeft>
-            <BulletIcons></BulletIcons>
-            <Bullets>
-              {skillTopics.map((topic, index) => {
-                return (
-                  <>
-                    <WrapperBullet>
-                      <FontAwesomeIcon icon={faClock} />
-                      <BulletText href={topic.href}>
-                        {topic.topicName}
-                      </BulletText>
-                    </WrapperBullet>
-                  </>
-                );
-              })}
-            </Bullets>
-          </DetailsLeft>
-          <DetailsRight>
-            <h2 id="frontend" style={{ minHeight: "100%" }}>
-              {skillsFrontend.map((frontend, index) => {
-                return (
-                  <>
-                    <SkillsDetailsWrapper>
-                      <SkillLeft>
-                        <Dot></Dot>
-                        <LeftText key={index}>{frontend.name}</LeftText>
-                      </SkillLeft>
-                      <FontAwesomeIcon icon={faCheckCircle} />
-                    </SkillsDetailsWrapper>
-                  </>
-                );
-              })}
-            </h2>
-            <h2 id="backend" style={{ minHeight: "100%" }}>
-              {skillsBackend.map((backend, index) => {
-                return (
-                  <>
-                    <SkillsDetailsWrapper>
-                      <SkillLeft>
-                        <Dot></Dot>
-                        <LeftText key={index}>{backend.name}</LeftText>
-                      </SkillLeft>
-                      <FontAwesomeIcon icon={faCheckCircle} />
-                    </SkillsDetailsWrapper>
-                  </>
-                );
-              })}
-            </h2>
-            <h2 id="devops" style={{ minHeight: "100%" }}>
-              {skillsDevops.map((dev, index) => {
-                return (
-                  <>
-                    <SkillsDetailsWrapper>
-                      <SkillLeft>
-                        <Dot></Dot>
-                        <LeftText key={index}>{dev.name}</LeftText>
-                      </SkillLeft>
-                      <FontAwesomeIcon icon={faCheckCircle} />
-                    </SkillsDetailsWrapper>
-                  </>
-                );
-              })}
-            </h2>
-          </DetailsRight>
-        </SkillsDetails>
-      </SkillsWrapper>
+  <section id="skills">
+        <SkillsWrapper>
+          <SAboutMe>Skills</SAboutMe>
+          <WhyChooseMe>Languages, Frameworks...</WhyChooseMe>
+          <div id="line"></div>
+  
+          <SkillsDetails>
+            <DetailsLeft>
+              <BulletIcons></BulletIcons>
+              <Bullets>
+                {skillTopics.map((topic, index) => {
+                  return (
+                    <>
+                      <WrapperBullet>
+                        <FontAwesomeIcon icon={faClock} />
+                        <BulletText href={topic.href}>
+                          {topic.topicName}
+                        </BulletText>
+                      </WrapperBullet>
+                    </>
+                  );
+                })}
+              </Bullets>
+            </DetailsLeft>
+            <DetailsRight>
+              <h2 id="frontend" style={{ minHeight: "100%" }}>
+                {skillsFrontend.map((frontend, index) => {
+                  return (
+                    <>
+                      <SkillsDetailsWrapper>
+                        <SkillLeft>
+                          <Dot></Dot>
+                          <LeftText key={index}>{frontend.name}</LeftText>
+                        </SkillLeft>
+                        <FontAwesomeIcon icon={faCheckCircle} />
+                      </SkillsDetailsWrapper>
+                    </>
+                  );
+                })}
+              </h2>
+              <h2 id="backend" style={{ minHeight: "100%" }}>
+                {skillsBackend.map((backend, index) => {
+                  return (
+                    <>
+                      <SkillsDetailsWrapper>
+                        <SkillLeft>
+                          <Dot></Dot>
+                          <LeftText key={index}>{backend.name}</LeftText>
+                        </SkillLeft>
+                        <FontAwesomeIcon icon={faCheckCircle} />
+                      </SkillsDetailsWrapper>
+                    </>
+                  );
+                })}
+              </h2>
+              <h2 id="devops" style={{ minHeight: "100%" }}>
+                {skillsDevops.map((dev, index) => {
+                  return (
+                    <>
+                      <SkillsDetailsWrapper>
+                        <SkillLeft>
+                          <Dot></Dot>
+                          <LeftText key={index}>{dev.name}</LeftText>
+                        </SkillLeft>
+                        <FontAwesomeIcon icon={faCheckCircle} />
+                      </SkillsDetailsWrapper>
+                    </>
+                  );
+                })}
+              </h2>
+            </DetailsRight>
+          </SkillsDetails>
+        </SkillsWrapper>
+  </section>
     </>
   );
 }

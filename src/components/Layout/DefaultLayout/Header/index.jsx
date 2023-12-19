@@ -11,9 +11,10 @@ const Header = () => {
           <StyleUlRight>
             <li>Home</li>
             <li><a href="#aboutme">About me</a></li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li ><a href="#skills">Skills</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#achievement">Achievement</a></li>
+            <li><a href="#contact">Contact</a></li>
           </StyleUlRight>
         </StyleNavHeader>
       </StyledHeader>

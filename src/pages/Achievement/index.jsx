@@ -43,25 +43,27 @@ const Achievement = () => {
   ];
 
   return (
-    <SliderWrapper>
-      <Slider {...settings}>
-        {achievements.map((achievement) => {
-          return (
-            <SliderItem>
-              <SliderLogo src={`${achievement.logo}`}></SliderLogo>
-              <SliderName>{achievement.name}</SliderName>
-              <SliderLink
-                target="_blank"
-                rel="noopener noreferrer"
-                href={achievement.link}
-              >
-                {achievement.link == null ? "Uploading" : "See more Here"}{" "}
-              </SliderLink>
-            </SliderItem>
-          );
-        })}
-      </Slider>
-    </SliderWrapper>
+ 
+        <SliderWrapper>
+          <Slider {...settings}>
+            {achievements.map((achievement) => {
+              return (
+                <SliderItem>
+                  <SliderLogo src={`${achievement.logo}`}></SliderLogo>
+                  <SliderName>{achievement.name}</SliderName>
+                  <SliderLink
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={achievement.link}
+                  >
+                    {achievement.link == null ? "Uploading" : "See more Here"}{" "}
+                  </SliderLink>
+                </SliderItem>
+              );
+            })}
+          </Slider>
+        </SliderWrapper>
+
   );
 };
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
-import imgMe from '../../assets/mainPicture.jpg'
+import imgMe from "../../assets/mainPicture.jpg";
 function AboutMe() {
   const [highlightText, setHighlightText] = useState([
     {
@@ -26,7 +26,9 @@ function AboutMe() {
         <WhyChooseMe>Why Choose Me?</WhyChooseMe>
         <div id="line"></div>
         <IntroduceBookWrapper>
-          <IntroduceBookLeft style={{backgroundImage:`url(${imgMe})`}}></IntroduceBookLeft>
+          <IntroduceBookLeft
+            style={{ backgroundImage: `url(${imgMe})` }}
+          ></IntroduceBookLeft>
           <IntroduceBookRight>
             <ItemWrapper>
               <TextRight>
@@ -55,8 +57,17 @@ function AboutMe() {
                 </HightLight>
               </FewHighlightWrapper>
               <ButtonWrapper>
-                <ButtonLeft>Download CV</ButtonLeft>
-                <ButtonRight>View my Github</ButtonRight>
+                <a
+                  href="https://www.canva.com/design/DAFuRMak9l8/81-9QJ1cnF2Qz8nfZ7L4Sg/view?utm_content=DAFuRMak9l8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+                  target="_blank"
+               
+                >
+                  <ButtonLeft>See my CV</ButtonLeft>
+                </a>
+               <a
+                  href="https://github.com/duchoaang"
+                  target="_blank"
+                  > <ButtonRight>View my Github</ButtonRight></a>
               </ButtonWrapper>
             </ItemWrapper>
           </IntroduceBookRight>
@@ -92,7 +103,7 @@ const IntroduceBookWrapper = styled.div`
 const IntroduceBookLeft = styled.div`
   background-color: blue;
   flex: 1;
- 
+
   background-position-x: 50%;
   background-position-y: 100%;
   background-repeat: no-repeat;
@@ -117,7 +128,9 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   button {
-    width: 30%;
+    width: 100%;
+    padding-left:25px;
+    padding-right:25px;
     border-radius: 25px;
     outline: none;
     border: none;
@@ -126,7 +139,9 @@ const ButtonWrapper = styled.div`
     height: 50px;
   }
 `;
-const ButtonLeft = styled.button``;
+const ButtonLeft = styled.button`
+  width: 100%;
+`;
 const ButtonRight = styled.button`
   background-color: var(--button-right);
   color: var(--textbutton-right);
@@ -155,9 +170,7 @@ const HightLightDot = styled.div`
   background-color: var(--color-dot);
 `;
 const HightLightText = styled.h2`
-
   font-size: var(--fontSize-normal);
 `;
-
 
 export default AboutMe;

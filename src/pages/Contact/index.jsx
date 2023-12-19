@@ -14,17 +14,19 @@ const Contact = () => {
 
     return (
     
-            <form className="contact-form" onSubmit={handleSubmit}>
-                <label>
-                    Name:
-                    <input type="text" value={senderName} onChange={(e) => setSenderName(e.target.value)} required />
-                </label>
-                <label>
-                    Message:
-                    <textarea value={message} onChange={(e) => setMessage(e.target.value)} required />
-                </label>
-                <button><input type="submit" value="Send me" /></button>
-            </form>
+           <section id ="contact">
+                <form className="contact-form" onSubmit={handleSubmit}>
+                    <label>
+                        Name:
+                        <input type="text" value={senderName} onChange={(e) => setSenderName(e.target.value)} required />
+                    </label>
+                    <label>
+                        Message:
+                        <textarea value={message} onChange={(e) => setMessage(e.target.value)} required />
+                    </label>
+                    <button><input type="submit" value="Send me" /></button>
+                </form>
+           </section>
 
     );
 };

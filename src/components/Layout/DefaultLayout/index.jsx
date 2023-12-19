@@ -8,7 +8,7 @@ function DefaultLayout({ children }) {
          {children}
           <div className='footer-container'>
             <div className='footer-parent'>
-                <img src={('/src/assets/shape-bg.png')} alt='not available'></img>
+               
             </div>
         </div>
       </HomeContainer>
@@ -19,6 +19,7 @@ function DefaultLayout({ children }) {
 const HomeContainer = styled.div`
   /* background-image: url("src/assets/bg.png"); */
   min-height: 870px;
+  margin-bottom:100px;
 `;
 const ChildrenContainer = styled.div`
 

@@ -117,73 +117,75 @@ function Projects() {
 
   return (
     <>
-      <CardWrapper>
-        {ProjectInfo.map((p, index) => (
-          <div
-            key={index}
-            className={`card ${flippedIndices[index] ? "flipped" : ""}`}
-          >
-            <div className="card-face card-front">
-              <img src={`${p.img}`} alt="#" />
-              <div className="content">
-                <h2>{p.name}</h2>
+      <section id="project">
+        <CardWrapper>
+          {ProjectInfo.map((p, index) => (
+            <div
+              key={index}
+              className={`card ${flippedIndices[index] ? "flipped" : ""}`}
+            >
+              <div className="card-face card-front">
+                <img src={`${p.img}`} alt="#" />
+                <div className="content">
+                  <h2>{p.name}</h2>
+                </div>
+                <ButtonWrapper>
+                  <a
+                    href={p.linkGit}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: "15px" }}
+                  >
+                    <ButtonLeft>Github</ButtonLeft>
+                  </a>
+                  <ButtonRight onClick={() => handleCardClick(index)}>
+                    Description
+                  </ButtonRight>
+                </ButtonWrapper>
               </div>
-              <ButtonWrapper>
-                <a
-                  href={p.linkGit}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ fontSize: "15px" }}
-                >
-                  <ButtonLeft>Github</ButtonLeft>
-                </a>
-                <ButtonRight onClick={() => handleCardClick(index)}>
-                  Description
-                </ButtonRight>
-              </ButtonWrapper>
-            </div>
-            <div className="card-face card-back">
-              <div className="cardInfoWrapper">
+              <div className="card-face card-back">
+                <div className="cardInfoWrapper">
+                  <h2>
+                    <span className="des_details">Description:</span> {p.des}
+                  </h2>
+                  <h2>
+                    <span className="des_details">Member: </span>
+                    {p.member}
+                  </h2>
+                  <h2>
+                    <span className="des_details">My role:</span> {p.role}
+                  </h2>
+                  <h2>
+                    <span className="des_details">Result:</span> {p.result}
+                  </h2>
+                </div>
+  
                 <h2>
-                  <span className="des_details">Description:</span> {p.des}
+                  {p.tech.map((t, i) => (
+                    <div key={i} className="tech">
+                      <div className="dot"></div>
+                      <div className="techName">{t.nameTech}</div>
+                    </div>
+                  ))}
                 </h2>
-                <h2>
-                  <span className="des_details">Member: </span>
-                  {p.member}
-                </h2>
-                <h2>
-                  <span className="des_details">My role:</span> {p.role}
-                </h2>
-                <h2>
-                  <span className="des_details">Result:</span> {p.result}
-                </h2>
+                <ButtonWrapper>
+                  <a
+                    href={p.linkLive}
+                    target="_blank"
+                    rel="noopener nore<p></p>ferrer"
+                    style={{ fontSize: "15px" }}
+                  >
+                    <ButtonLeft>Live</ButtonLeft>
+                  </a>
+                  <ButtonRight onClick={() => handleCardClick(index)}>
+                    Back
+                  </ButtonRight>
+                </ButtonWrapper>
               </div>
-
-              <h2>
-                {p.tech.map((t, i) => (
-                  <div key={i} className="tech">
-                    <div className="dot"></div>
-                    <div className="techName">{t.nameTech}</div>
-                  </div>
-                ))}
-              </h2>
-              <ButtonWrapper>
-                <a
-                  href={p.linkLive}
-                  target="_blank"
-                  rel="noopener nore<p></p>ferrer"
-                  style={{ fontSize: "15px" }}
-                >
-                  <ButtonLeft>Live</ButtonLeft>
-                </a>
-                <ButtonRight onClick={() => handleCardClick(index)}>
-                  Back
-                </ButtonRight>
-              </ButtonWrapper>
             </div>
-          </div>
-        ))}
-      </CardWrapper>
+          ))}
+        </CardWrapper>
+      </section>
     </>
   );
 }

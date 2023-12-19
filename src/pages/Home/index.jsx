@@ -62,8 +62,8 @@ const Home = () => {
                 Web Development with ReactJs, React Native, Java, Python.
               </TextSwitcherWrapper>
               <ButtonWrapper>
-                <ButtonLeft>Download CV</ButtonLeft>
-                <ButtonRight>Contact Info</ButtonRight>
+                <a href="https://www.canva.com/design/DAFuRMak9l8/81-9QJ1cnF2Qz8nfZ7L4Sg/view?utm_content=DAFuRMak9l8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank"><ButtonLeft>See my CV</ButtonLeft></a>
+               <a href="https://github.com/duchoaang" target="_blank"> <ButtonRight>Contact Info</ButtonRight></a>
               </ButtonWrapper>
             </StyledIntroduce>
           </StyledRightMain>
@@ -77,7 +77,7 @@ const Home = () => {
       <div id="line"></div>
       <Projects />
 
-      <SAboutMe>Achievement</SAboutMe>
+      <SAboutMe id ="achievement"> Achievement</SAboutMe>
       <WhyChooseMe>Some of my achievements</WhyChooseMe>
       <div id="line"></div>
       <Achievement />
