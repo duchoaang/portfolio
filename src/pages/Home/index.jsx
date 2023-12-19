@@ -6,7 +6,8 @@ import Skills from "../Skills";
 import AboutMe from "../AboutMe";
 
 import Projects from "../Projects";
-
+import Achievement from "../Achievement";
+import Contact from "../Contact";
 const Home = () => {
   const el = useRef(null);
   useEffect(() => {
@@ -19,7 +20,6 @@ const Home = () => {
     });
 
     return () => {
-
       typed.destroy();
     };
   }, []);
@@ -75,10 +75,18 @@ const Home = () => {
       <SAboutMe>Featured Projects</SAboutMe>
       <WhyChooseMe>Few project featured by me</WhyChooseMe>
       <div id="line"></div>
-      <Projects/>
+      <Projects />
 
       <SAboutMe>Achievement</SAboutMe>
+      <WhyChooseMe>Some of my achievements</WhyChooseMe>
       <div id="line"></div>
+      <Achievement />
+
+      <SAboutMe>Contact Me</SAboutMe>
+  
+    
+      <div id="line"></div>
+      <Contact />
     </>
   );
 };
@@ -209,9 +217,8 @@ const IntroduceWrapper = styled.div`
 `;
 const SAboutMe = styled.h2`
   display: flex;
-  margin-top:8%;
+  margin-top: 8%;
   font-size: 35px;
   font-weight: bold;
   justify-content: center;
 `;
-

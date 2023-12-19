@@ -3,10 +3,16 @@ import { useState, useEffect } from "react";
 function AboutMe() {
   const [highlightText, setHighlightText] = useState([
     {
-      context: "Build RestFul API with Java, Python",
+      context: "Build Front-end Website with ReactJs",
     },
     {
-      context: "Build Front-end Website with ReactJs",
+      context: "Build Back-end Website with Java, Python",
+    },
+    {
+      context: "Build RESTful API",
+    },
+    {
+      context: "Integration CI/CD ",
     },
     {
       context: "Build Moblie App with React Native",
@@ -30,7 +36,7 @@ function AboutMe() {
                 requirements for subjects and projects related to the job.
                 Moreover, I learned specialized skills as improved personal
                 skills that are needed for the demand of these positions:
-                Full-Stack Developer Software Designer Website Developer.
+                Full-Stack Developer, Software Engineer Website Developer.
               </TextRight>
               <FewHighlightWrapper>
                 <FewHighlight>Here are a few highlights</FewHighlight>
@@ -78,7 +84,7 @@ const IntroduceBookWrapper = styled.div`
   width: 60%;
   margin: 0 auto;
   margin-top: 20px;
-  min-height: 700px;
+  min-height: 800px;
 
   box-shadow: 0 0 20px -2px #1f2235;
 `;
