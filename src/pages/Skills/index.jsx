@@ -63,7 +63,7 @@ function Skills() {
 
   return (
     <>
-  <section id="skills">
+  <section id="skills" className="element-wrapper">
         <SkillsWrapper>
           <SAboutMe>Skills</SAboutMe>
           <WhyChooseMe>Languages, Frameworks...</WhyChooseMe>

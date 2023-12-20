@@ -4,7 +4,7 @@ import styled from "styled-components";
 import cardDessertation from "../../assets/dissertation.jpg";
 import learningSystem from "../../assets/learningSystem.jpg";
 import documents from "../../assets/documents.png";
-import legal from '../../assets/project_1.jpg'
+import legal from "../../assets/project_1.jpg";
 const ProjectInfo = [
   {
     img: legal,
@@ -117,7 +117,10 @@ function Projects() {
 
   return (
     <>
-      <section id="project">
+      <section id="project" className="element-wrapper">
+        <SAboutMe>Featured Projects</SAboutMe>
+        <WhyChooseMe>Few project featured by me</WhyChooseMe>
+        <div id="line"></div>
         <CardWrapper>
           {ProjectInfo.map((p, index) => (
             <div
@@ -159,7 +162,7 @@ function Projects() {
                     <span className="des_details">Result:</span> {p.result}
                   </h2>
                 </div>
-  
+
                 <h2>
                   {p.tech.map((t, i) => (
                     <div key={i} className="tech">
@@ -221,4 +224,20 @@ const CardWrapper = styled.div`
   flex-wrap: wrap;
 `;
 
+const SAboutMe = styled.h2`
+  display: flex;
+  margin-top: 8%;
+  font-size: 35px;
+  font-weight: bold;
+  justify-content: center;
+`;
+
+const WhyChooseMe = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+`;
 export default Projects;

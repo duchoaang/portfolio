@@ -43,27 +43,30 @@ const Achievement = () => {
   ];
 
   return (
- 
-        <SliderWrapper>
-          <Slider {...settings}>
-            {achievements.map((achievement) => {
-              return (
-                <SliderItem>
-                  <SliderLogo src={`${achievement.logo}`}></SliderLogo>
-                  <SliderName>{achievement.name}</SliderName>
-                  <SliderLink
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={achievement.link}
-                  >
-                    {achievement.link == null ? "Uploading" : "See more Here"}{" "}
-                  </SliderLink>
-                </SliderItem>
-              );
-            })}
-          </Slider>
-        </SliderWrapper>
-
+    <section id="achievement" className="element-wrapper">
+      <SAboutMe> Achievement</SAboutMe>
+      <WhyChooseMe>Some of my achievements</WhyChooseMe>
+      <div id="line"></div>
+      <SliderWrapper>
+        <Slider {...settings}>
+          {achievements.map((achievement) => {
+            return (
+              <SliderItem>
+                <SliderLogo src={`${achievement.logo}`}></SliderLogo>
+                <SliderName>{achievement.name}</SliderName>
+                <SliderLink
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={achievement.link}
+                >
+                  {achievement.link == null ? "Uploading" : "See more Here"}{" "}
+                </SliderLink>
+              </SliderItem>
+            );
+          })}
+        </Slider>
+      </SliderWrapper>
+    </section>
   );
 };
 
@@ -74,13 +77,13 @@ const SliderWrapper = styled.div`
 `;
 const SliderLogo = styled.img`
   width: 200px;
-  margin-top:20px;
+  margin-top: 20px;
   height: 200px;
 `;
 const SliderName = styled.div`
   font-weight: 700;
   font-size: 25px;
-  
+
   margin-top: 25px;
 `;
 
@@ -102,5 +105,20 @@ const SliderItem = styled.div`
   border: 1px solid;
   border-radius: 10px;
 `;
+const SAboutMe = styled.h2`
+  display: flex;
+  margin-top: 8%;
+  font-size: 35px;
+  font-weight: bold;
+  justify-content: center;
+`;
 
+const WhyChooseMe = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+`;
 export default Achievement;

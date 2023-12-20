@@ -1,7 +1,7 @@
 /* Card.css */
 .card {
-    width: 35%;
-    height: 600px;
+    width: 30%;
+    height: 700px;
     perspective: 1000px;
     transition: transform 0.6s;
     transform-style: preserve-3d;

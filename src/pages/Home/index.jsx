@@ -4,7 +4,7 @@ import "boxicons";
 import Typed from "typed.js";
 import Skills from "../Skills";
 import AboutMe from "../AboutMe";
-import imgMe from '../../assets/picture_3.jpg'
+import imgMe from "../../assets/picture_3.jpg";
 import Projects from "../Projects";
 import Achievement from "../Achievement";
 import Contact from "../Contact";
@@ -23,12 +23,35 @@ const Home = () => {
       typed.destroy();
     };
   }, []);
+
+  useEffect(() => {
+    const cards = document.querySelectorAll(".element-wrapper");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("show", entry.isIntersecting);
+      });
+
+    },
+    { threshold: 0.5 }
+  );
+
+  cards.forEach((card) => {
+    observer.observe(card);
+  });
+
+  }, []);
+
+
   return (
     <>
       <ChildrenContainer>
         <StyledMain>
           <StyledLeftMain>
-            <StyledLeftImage style={{backgroundImage:`url(${imgMe})`}} src=""></StyledLeftImage>
+            <StyledLeftImage
+              style={{ backgroundImage: `url(${imgMe})` }}
+              src=""
+            ></StyledLeftImage>
           </StyledLeftMain>
           <StyledRightMain>
             <StyledContact>
@@ -62,8 +85,16 @@ const Home = () => {
                 Web Development with ReactJs, React Native, Java, Python.
               </TextSwitcherWrapper>
               <ButtonWrapper>
-                <a href="https://www.canva.com/design/DAFuRMak9l8/81-9QJ1cnF2Qz8nfZ7L4Sg/view?utm_content=DAFuRMak9l8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank"><ButtonLeft>See my CV</ButtonLeft></a>
-               <a href="https://github.com/duchoaang" target="_blank"> <ButtonRight>Contact Info</ButtonRight></a>
+                <a
+                  href="https://www.canva.com/design/DAFuRMak9l8/81-9QJ1cnF2Qz8nfZ7L4Sg/view?utm_content=DAFuRMak9l8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+                  target="_blank"
+                >
+                  <ButtonLeft>See my CV</ButtonLeft>
+                </a>
+                <a href="https://github.com/duchoaang" target="_blank">
+                  {" "}
+                  <ButtonRight>Contact Info</ButtonRight>
+                </a>
               </ButtonWrapper>
             </StyledIntroduce>
           </StyledRightMain>
@@ -72,20 +103,13 @@ const Home = () => {
 
       <AboutMe />
       <Skills />
-      <SAboutMe>Featured Projects</SAboutMe>
-      <WhyChooseMe>Few project featured by me</WhyChooseMe>
-      <div id="line"></div>
+      
       <Projects />
 
-      <SAboutMe id ="achievement"> Achievement</SAboutMe>
-      <WhyChooseMe>Some of my achievements</WhyChooseMe>
-      <div id="line"></div>
+      
       <Achievement />
 
-      <SAboutMe>Contact Me</SAboutMe>
-  
-    
-      <div id="line"></div>
+     
       <Contact />
     </>
   );

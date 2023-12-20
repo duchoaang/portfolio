@@ -11,9 +11,10 @@ ul li {
     text-decoration: none;
     list-style-type: none;
 }
+
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x     : hidden;
 }
 
 a {
@@ -29,16 +30,29 @@ a {
     --fontSize-button : 15px;
     --color-dot       : #222020;
     --fontSize-normal : 15px;
-    --line-color: #222020;
+    --line-color      : #222020;
 }
-#line{
+
+#line {
     background-color: var(--line-color);
-    width: 180px;
-  
-    height: 4px;
-    display: flex;
+    width           : 180px;
+
+    height         : 4px;
+    display        : flex;
     justify-content: center;
-    margin: 0 auto;
-    margin-top: 1%;
-    margin-bottom: 50px;
+    margin         : 0 auto;
+    margin-top     : 1%;
+    margin-bottom  : 50px;
+}
+
+.element-wrapper {
+    /* background-color: red; */
+    /* transform: translateX(100px); */
+    opacity   : 0;
+    transition: 0.7s ease-out;
+}
+
+.element-wrapper.show {
+    transform: translateX(50px);
+    opacity  : 1;
 }

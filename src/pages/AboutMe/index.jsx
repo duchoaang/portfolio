@@ -21,7 +21,7 @@ function AboutMe() {
   ]);
   return (
     <>
-      <section id="aboutme">
+      <section id="aboutme" className="element-wrapper">
         <SAboutMe>About Me</SAboutMe>
         <WhyChooseMe>Why Choose Me?</WhyChooseMe>
         <div id="line"></div>
