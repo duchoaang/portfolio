@@ -5,6 +5,7 @@ import cardDessertation from "../../assets/dissertation.jpg";
 import learningSystem from "../../assets/learningSystem.jpg";
 import documents from "../../assets/documents.png";
 import legal from "../../assets/project_1.jpg";
+
 const ProjectInfo = [
   {
     img: legal,

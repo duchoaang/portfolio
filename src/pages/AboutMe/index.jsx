@@ -60,14 +60,13 @@ function AboutMe() {
                 <a
                   href="https://www.canva.com/design/DAFuRMak9l8/81-9QJ1cnF2Qz8nfZ7L4Sg/view?utm_content=DAFuRMak9l8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
                   target="_blank"
-               
                 >
                   <ButtonLeft>See my CV</ButtonLeft>
                 </a>
-               <a
-                  href="https://github.com/duchoaang"
-                  target="_blank"
-                  > <ButtonRight>View my Github</ButtonRight></a>
+                <a href="https://github.com/duchoaang" target="_blank">
+                  {" "}
+                  <ButtonRight>View my Github</ButtonRight>
+                </a>
               </ButtonWrapper>
             </ItemWrapper>
           </IntroduceBookRight>
@@ -99,6 +98,18 @@ const IntroduceBookWrapper = styled.div`
   min-height: 800px;
 
   box-shadow: 0 0 20px -2px #1f2235;
+
+  @media (min-width: 1200px) and (max-width: 1600px) {
+    width: 80%;
+    
+    min-height: 870px;
+  }
+  @media (min-width: 600px) and (max-width: 1200px){
+    width: 80%;
+  
+    min-height: 870px;
+  }
+
 `;
 const IntroduceBookLeft = styled.div`
   background-color: blue;
@@ -129,8 +140,8 @@ const ButtonWrapper = styled.div`
   justify-content: space-around;
   button {
     width: 100%;
-    padding-left:25px;
-    padding-right:25px;
+    padding-left: 25px;
+    padding-right: 25px;
     border-radius: 25px;
     outline: none;
     border: none;

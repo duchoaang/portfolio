@@ -24,23 +24,23 @@ const Home = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const cards = document.querySelectorAll(".element-wrapper");
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        entry.target.classList.toggle("show", entry.isIntersecting);
-      });
+  // useEffect(() => {
+  //   const cards = document.querySelectorAll(".element-wrapper");
+  // const observer = new IntersectionObserver(
+  //   (entries) => {
+  //     entries.forEach((entry) => {
+  //       entry.target.classList.toggle("show", entry.isIntersecting);
+  //     });
 
-    },
-    { threshold: 0.5 }
-  );
+  //   },
+  //   { threshold: 0.5 }
+  // );
 
-  cards.forEach((card) => {
-    observer.observe(card);
-  });
+  // cards.forEach((card) => {
+  //   observer.observe(card);
+  // });
 
-  }, []);
+  // }, []);
 
 
   return (
