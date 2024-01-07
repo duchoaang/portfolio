@@ -96,24 +96,30 @@ const IntroduceBookWrapper = styled.div`
   margin: 0 auto;
   margin-top: 20px;
   min-height: 800px;
+   @media (max-width: 390px) {
+    height:500px;
+    overflow:scroll
+  }
 
   box-shadow: 0 0 20px -2px #1f2235;
 
   @media (min-width: 1200px) and (max-width: 1600px) {
     width: 80%;
-    
-    min-height: 870px;
-  }
-  @media (min-width: 600px) and (max-width: 1200px){
-    width: 80%;
-  
-    min-height: 870px;
-  }
 
+    min-height: 870px;
+  }
+  @media (min-width: 600px) and (max-width: 1200px) {
+    width: 80%;
+
+    min-height: 870px;
+  }
 `;
 const IntroduceBookLeft = styled.div`
   background-color: blue;
   flex: 1;
+  @media (max-width: 390px) {
+    display: none;
+  }
 
   background-position-x: 50%;
   background-position-y: 100%;
@@ -138,6 +144,7 @@ const ButtonWrapper = styled.div`
   justify-self: flex-end;
   display: flex;
   justify-content: space-around;
+  
   button {
     width: 100%;
     padding-left: 25px;
@@ -148,6 +155,14 @@ const ButtonWrapper = styled.div`
     font-size: var(--fontSize-button);
 
     height: 50px;
+  }
+   @media (max-width: 390px) {
+    flex-direction:column;
+    button{
+      margin-top:20px;
+     padding:0;
+    }
+   
   }
 `;
 const ButtonLeft = styled.button`

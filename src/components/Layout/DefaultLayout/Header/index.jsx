@@ -61,8 +61,14 @@ const StyleUlRight = styled.ul`
   @media (min-width: 1200px) and (max-width: 1600px) {
     width: 100%;
     margin-bottom: 10px;
-    background-color:red;
+
   }
+  @media (max-width: 390px) {
+   background-color:red;
+   display:none;
+
+  }
+
   @media (min-width: 600px) and (max-width: 1200px){
     display: none;
   }

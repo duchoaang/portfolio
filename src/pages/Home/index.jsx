@@ -42,7 +42,6 @@ const Home = () => {
 
   // }, []);
 
-
   return (
     <>
       <ChildrenContainer>
@@ -103,13 +102,11 @@ const Home = () => {
 
       <AboutMe />
       <Skills />
-      
+
       <Projects />
 
-      
       <Achievement />
 
-     
       <Contact />
     </>
   );
@@ -137,7 +134,9 @@ const StyledLeftMain = styled.div`
   /* box-shadow: 0 0 10px rgba(62, 61, 61, 0.5); */
 
   display: flex;
-
+ @media (max-width: 390px) {
+    display: none;
+  }
   justify-content: center;
   align-items: center;
 `;
@@ -152,6 +151,7 @@ const StyledLeftImage = styled.img`
   &:hover {
     transform: scale(1.1);
   }
+ 
 `;
 
 const StyledRightMain = styled.div`
